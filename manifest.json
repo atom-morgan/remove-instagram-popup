@@ -1,0 +1,26 @@
+{
+  "name" : "Remove Instagram Popup",
+  "author": "Adam Morgan",
+  "version" : "1.0",
+  "manifest_version" : 2,
+  "minimum_chrome_version": "34",
+  "description" : "Remove Instagram's annoying popup to install their app.",
+  "homepage_url": "http://atommorgan.com",
+  "content_scripts": [
+    {
+      "matches": ["https://*.instagram.com/"],
+      "js": ["background-script.js"]
+    }
+  ],
+  "icons": {
+    "16": "logo-16.png",
+    "48": "logo-48.png",
+    "128": "logo-128.png"
+  },
+  "web_accessible_resources": [
+    "logo-48.png"
+  ],
+  "browser_action": {
+    "default_icon": "logo-48.png"
+  }
+}
